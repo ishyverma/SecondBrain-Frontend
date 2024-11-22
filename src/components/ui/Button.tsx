@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 
 interface ButtonProps {
-    variant: "primary" | "secondary";
-    size: "sm" | "md" | "lg";
+    variant?: "primary" | "secondary";
+    size?: "sm" | "md" | "lg";
     text: string;
     startIcon?: ReactElement;
     endIcon?: ReactElement;
@@ -24,6 +24,6 @@ const defaultStyles = "rounded-md my-1 mx-1 flex gap-1"
 
 export const Button = ( props: ButtonProps ) => {
     return <div>
-        <button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>{props.startIcon ? <div className="justify-self-start self-center">{props.startIcon}</div> : null}{props.text}{props.endIcon ? <div className="justify-self-start self-center">{props.endIcon}</div> : null}</button>
+        <button className={`${variantStyles[props.variant || "primary"]} ${defaultStyles} ${sizeStyles[props.size || "sm"]}`}>{props.startIcon ? <div className="justify-self-start self-center">{props.startIcon}</div> : null}{props.text}{props.endIcon ? <div className="justify-self-start self-center">{props.endIcon}</div> : null}</button>
     </div>
 }
