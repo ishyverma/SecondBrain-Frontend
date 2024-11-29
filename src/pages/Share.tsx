@@ -1,11 +1,6 @@
-import axios from "axios"
 import { useParams } from "react-router-dom"
-import { BACKEND_URL } from "../config"
-import { useEffect } from "react"
 import { useShare } from "../hooks/useShare"
 import { Card } from "../components/Card"
-import { ShareIcon } from "../icons/ShareIcon"
-import { ContentModal } from "../components/ContentModal"
 import { Sidebar } from "../components/Sidebar"
 
 export function Share() {

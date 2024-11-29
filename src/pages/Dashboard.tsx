@@ -12,7 +12,7 @@ import { BACKEND_URL } from '../config'
 
 export function Dashboard() {
     const [openModal, setOpenModal] = useState(false)
-    const {content, refresh} = useContent();
+    const {content} = useContent();
     return (
       <div className='p-4 bg-gray-100 min-h-screen'>
         <div>
