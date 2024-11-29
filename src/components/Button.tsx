@@ -17,7 +17,7 @@ const variantColor = {
 const defaultStyles = "px-4 py-2 rounded-md font-light flex gap-2 items-center justify-center cursor-pointer"
 
 export const Button = ({ variant, text, startIcon, onClick, fullWidth, loading }: ButtonProps) => {
-    return  <button onClick={onClick} className={`${variantColor[variant]} ${defaultStyles} ${fullWidth ? "w-full" : ""} ${loading? 'opacity-45' : ""} cursor-pointer`} disabled={loading}>
+    return  <button onClick={onClick} className={`${variantColor[variant]} ${defaultStyles} ${fullWidth ? "w-full" : ""} ${loading? 'opacity-45 cursor-not-allowed' : ""} cursor-pointer`} disabled={loading}>
         {startIcon}
         {text}
     </button>
